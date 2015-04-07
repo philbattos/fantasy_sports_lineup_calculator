@@ -1,0 +1,29 @@
+.well
+  = form_tag do 
+    = label_tag :pool_size, "Pool"
+    = text_field_tag :pool_size
+    %br
+    = label_tag :players, "Players"
+    = text_field_tag :players
+    %br
+    = label_tag :week, "Week"
+    = text_field_tag :week
+    %br
+    = label_tag :floor, "Floor"
+    = text_field_tag :floor
+    %br
+    = label_tag :quarterbacks, 'QB'
+    = check_box_tag :quarterbacks, 'QB'
+    = label_tag :running_backs, 'RB'
+    = check_box_tag :running_backs, 'RB'
+    = label_tag :receivers, 'WR'
+    = check_box_tag :receivers, 'WR'
+    = label_tag :tight_ends, 'TE'
+    = check_box_tag :tight_ends, 'TE'
+    = label_tag :kickers, 'K'
+    = check_box_tag :kickers, 'K'
+    = label_tag :defenses, 'D'
+    = check_box_tag :defenses, 'D'
+    %br
+    %br
+    .text-right= submit_tag "Calculate"

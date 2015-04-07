@@ -1,0 +1,51 @@
+.container
+  .row
+    .col-md-12.col-sm-12
+      %h1= "Fanduel Lineups"
+  .row
+    .col-md-12.col-sm-12
+      %h3.text-right= "Week 15"
+      %hr
+  .row
+    .col-md-12.col-sm-12
+      = render partial: 'lineup_panel', collection: @week_15_lineups, as: :lineup
+      %br
+  .row
+    .col-md-12.col-sm-12
+      %h3.text-right= "Week 16"
+      %hr
+  .row
+    .col-md-12.col-sm-12
+      = render partial: 'lineup_panel', collection: @week_16_lineups, as: :lineup
+      %br
+  .row
+    .col-md-12.col-sm-12
+      %h3.text-right= "Week 17"
+      %hr
+  .row
+    .col-md-12.col-sm-12
+      = render partial: 'lineup_panel', collection: @week_17_lineups, as: :lineup
+      %br
+  .row
+    .col-md-12.col-sm-12
+      %h3.text-right= "Week 18"
+      %hr
+  .row
+    .col-md-12.col-sm-12
+      = render partial: 'lineup_panel', collection: @week_18_lineups, as: :lineup
+      %br
+  .row
+    .col-md-12.col-sm-12
+      %h3.text-right= "Week 19"
+      %hr
+  .row
+    .col-md-12.col-sm-12
+      = render partial: 'lineup_panel', collection: @week_19_lineups, as: :lineup
+      %br
+  .row
+    .col-md-12.col-sm-12
+      %hr
+      %br
+
+
+

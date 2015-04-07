@@ -1,0 +1,23 @@
+.well
+  %h3.text-center= 'Rotowire'
+  = form_tag do 
+    = label_tag :week, "Week"
+    = text_field_tag :week
+    %br
+    = label_tag :salary_cap, "Salary"
+    = text_field_tag :salary_cap
+    %br
+    = label_tag :lineup_size, "Lineup"
+    = text_field_tag :lineup_size
+    %br
+    = label_tag :positions, "Positions"
+    = text_field_tag :positions
+    %br
+    = label_tag :floor, "Floor"
+    = text_field_tag :floor
+    %br
+    = label_tag :quantity, "Number"
+    = text_field_tag :quantity
+    %br
+    %br
+    .text-right= submit_tag "Build Lineup"

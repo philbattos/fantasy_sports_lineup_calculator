@@ -1,0 +1,69 @@
+.container
+  .row
+    .col-md-12.col-sm-12
+      %h1= 'Calculator'
+      .row
+        .col-md-3.col-sm-3
+          = render 'rotowire_form'
+        .col-md-3.col-sm-3
+          = render 'fantasy_pros_form'
+        .col-md-3.col-sm-3
+          = render 'numberfire_form'
+        .col-md-3.col-sm-3
+          = render 'spreadsheet_sports_form'
+      .row
+        .col-md-3.col-sm-3
+          = render 'rotowire_pool_calculator'
+  %hr
+  .row
+    .col-md-12.col-sm-12
+      = "Pool size: "
+      %strong= "#{params[:pool_size]}"
+      %br
+      = "Number of Items: "
+      %strong= "#{params[:players]}"
+      %br
+      = "Week: "
+      %strong= "#{params[:week]}"
+      %br
+      = "Value Floor: "
+      %strong= "#{params[:floor]}"
+      %br
+      = "Number of game plays: "
+      %strong= "#{number_with_delimiter @game_plays.count}" if @game_plays
+      %br
+      = "Number of combos: "
+      %strong= "#{number_with_delimiter @combos.count}" if @combos
+      %br
+      = "Salary Cap: "
+      %strong= "#{params[:salary_cap]}"
+      %br
+      = "Lineup Size: "
+      %strong= "#{params[:lineup_size]}"
+      %br
+      = "Positions: "
+      %strong= "#{params[:positions]}"
+      %br
+      = "Number of Lineups: "
+      %strong= "#{params[:quantity]}"
+      %br
+      = "Number of combinations: "
+      %strong= "#{number_with_delimiter @combinations.count}" if @combinations
+      %br
+      = "Number of Items: "
+      %strong= "#{params[:items]}"
+      %br
+  %br
+  .row
+    .col-md-12.col-sm-12
+      - if @combinations
+        - @combinations.map do |combo|
+          / = render partial: 'lineups/lineup_panel', collection: combo, as: :lineup
+          - combo.map do |game_play|
+            = game_play.player.first_name
+            = game_play.player.last_name
+            %br
+          %br
+
+
+

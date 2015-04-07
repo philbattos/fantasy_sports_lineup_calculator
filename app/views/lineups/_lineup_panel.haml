@@ -1,0 +1,24 @@
+.col-md-3.col-sm-3
+  .panel.panel-info
+    .panel-heading
+      %strong
+        = "#{lineup.id} - Week #{lineup.week}"
+        .pull-right= "#{lineup.source}"
+    .panel-body
+      .col-md-4.col-sm-4
+        .text-muted= "#{lineup.total_projected_points}"
+      .col-md-4.col-sm-4
+        %strong= "$#{lineup.total_salary}"
+      .col-md-4.col-sm-4
+        .text-muted= "#{lineup.actual_points}"
+        / %br= "#{lineup.players.count} players"
+    %table.table.table-striped.table-condensed
+      %thead
+        %tr.text-lg
+          %th= "Name"
+          %th= "Pos"
+      %tbody
+        - lineup.players.each do |player|
+          %tr
+            %td= "#{player.first_name} #{player.last_name}"
+            %td= player.position
