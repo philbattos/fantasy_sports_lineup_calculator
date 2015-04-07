@@ -45,7 +45,4 @@ gem 'fantasy_football_nerd' # access to Fantasy Football Nerd API
 gem 'haml'
 gem 'haml-rails'
 gem 'pry-rails',            :group => :development
-
-
-
-
+gem 'better_errors',        :group => :development
