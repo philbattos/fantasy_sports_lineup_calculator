@@ -1,7 +1,7 @@
 class BaseballController < ApplicationController
   def index
     today = Date.today
-    @games ||= GamedayApi::Game.find_by_date(today.year, today.month, today.day)
+    @games = GamedayApi::Game.find_by_date(today.year, today.month, today.day)
   end
 
   def show
