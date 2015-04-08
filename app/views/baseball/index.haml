@@ -1,1 +1,8 @@
-test
+.container
+  .row
+    .col-md-12.col-sm-12.text-center
+      Today's Games
+  - @games.each do |game|
+    .row
+      .col-sm-12.text-center
+        = link_to "#{game.gid}", baseball_path(game.gid)

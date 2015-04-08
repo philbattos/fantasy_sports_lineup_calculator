@@ -1,0 +1,11 @@
+.container
+  .row
+    .col-md-12.col-sm-12.text-center
+      - if @away_pitcher_fip < @home_pitcher_fip
+        %h1= "#{@away_team} (away team) projected starting pitcher #{@pitcher_away.first_name} #{@pitcher_away.last_name} has the advantage over #{@home_team} pitcher #{@pitcher_home.first_name} #{@pitcher_home.last_name}: (#{@away_pitcher_fip} vs #{@home_pitcher_fip})"
+      - else
+        %h1= "#{@home_team} (home team) projected starting pitcher has the advantage over #{@away_team} pitcher #{@pitcher_away.first_name} #{@pitcher_away.last_name}: (#{@home_pitcher_fip} vs #{@away_pitcher_fip})"
+  .row
+    .col-sm-12.text-center
+      %h1= "#{@pitcher_home.first_name} #{@pitcher_home.last_name}'s overall opponents batting average for this month: #{@pitcher_home.opponent_month.avg}"
+      %h1= "#{@pitcher_away.first_name} #{@pitcher_away.last_name}'s overall opponents batting average for this month: #{@pitcher_away.opponent_month.avg}"

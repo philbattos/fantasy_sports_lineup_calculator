@@ -44,7 +44,9 @@ gem 'mechanize'             # for automating navigation of websites (for web-scr
 gem 'fantasy_football_nerd' # access to Fantasy Football Nerd API
 gem 'haml'
 gem 'haml-rails'
+gem 'hpricot'               # eventually need to update gameday_api to use nokogiri, but for now use hpricot
 gem 'pry-rails',            :group => :development
 gem 'better_errors',        :group => :development
+gem "binding_of_caller",    :group => :development
 
 gem 'gameday_api', :git => 'https://github.com/ianderse/gameday_api.git'

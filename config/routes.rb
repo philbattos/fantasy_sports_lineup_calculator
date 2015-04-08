@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   post 'calculator' => 'calculations#show'
   resources :lineups
 
-  get 'baseball', to: 'baseball#index', as: 'baseball'
+  resources :baseball
 
 end
