@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/ianderse/gameday_api.git
+  revision: a1932cd6bd051fbaaf28443de8fb8a3310c10d20
+  specs:
+    gameday_api (0.2.7)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -169,6 +175,7 @@ DEPENDENCIES
   better_errors
   coffee-rails (~> 4.0.0)
   fantasy_football_nerd
+  gameday_api!
   haml
   haml-rails
   jbuilder (~> 2.0)

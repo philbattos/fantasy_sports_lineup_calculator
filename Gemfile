@@ -46,3 +46,5 @@ gem 'haml'
 gem 'haml-rails'
 gem 'pry-rails',            :group => :development
 gem 'better_errors',        :group => :development
+
+gem 'gameday_api', :git => 'https://github.com/ianderse/gameday_api.git'
